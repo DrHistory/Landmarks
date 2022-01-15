@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-20dp">
+
+    <ImageView
+        android:id="@+id/row_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/main_brandenburg"></ImageView>
+
+    <TextView
+        android:id="@+id/row_nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textColor="#fff"
+        android:textSize="22dp"
+        android:text="Brandenburg Gate"
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#fff"
+        android:layout_marginTop="10dp"></LinearLayout>
+
+    <TextView
+        android:id="@+id/row_citytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:textColor="#fff"
+        android:textSize="22dp"
+        android:text="Berlin"
+        ></TextView>
+</RelativeLayout>
