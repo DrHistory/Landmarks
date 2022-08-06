@@ -3,10 +3,12 @@ package com.kursatdrhistoryapp.landmarks.Adapter
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.kursatdrhistoryapp.landmarks.view.InfoActivity
 import com.kursatdrhistoryapp.landmarks.model.Landmarks
 import com.kursatdrhistoryapp.landmarks.databinding.RowBinding
+import com.kursatdrhistoryapp.landmarks.view.fragment.FeedFragmentDirections
 
 class RecyclerViewAdapter(val landmarklist: List<Landmarks>) :
     RecyclerView.Adapter<RecyclerViewAdapter.LandmarkHolder>() {
@@ -24,6 +26,11 @@ class RecyclerViewAdapter(val landmarklist: List<Landmarks>) :
         holder.binding.rowNameText.text = landmarklist[position].name
         holder.binding.rowCitytext.text = landmarklist[position].city
         holder.binding.rowImageview.setImageResource(landmarklist[position].image)
+
+        holder.itemView.setOnClickListener {
+            val action = FeedFragmentDirections.actionFeedFragmentToDetailFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
